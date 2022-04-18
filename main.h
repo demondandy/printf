@@ -7,16 +7,17 @@
 
 
 int _putchar(char c);
+int print_number(int n);
 int _printf(const char *format, ...);
-int print_num(int n);
-int print_octa(unsigned int n);
-int print_unsignd(unsigned int n);
-int print_hexadecup(unsigned int n);
-int print_hexadeclow(unsigned int n);
-int print_bina(unsigned int n)
-int _print_string(char *s);
+int print_octal(unsigned int n);
+int print_unsig(unsigned int n);
+int print_hexaup(unsigned int n);
+int print_hexalow(unsigned int n);
+int print_bi(unsigned int n);
+int _printstring(char *s);
 int rot13(char *point);
 int print_rev(char *);
 int print_hl(uintptr_t n);
+
 
 #endif
