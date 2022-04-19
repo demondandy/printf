@@ -1,24 +1,18 @@
 #include "main.h"
-
 /**
- * print_unsig - print unsigned numbers
- * @n: number to print
- * Return: @count, number or chars printed.
- */
-int print_unsig(unsigned int n)
+ * print_unsigned - Print a unsigned int
+ * @list: Number to print
+ *
+ * Return: Length of the number
+ **/
+int print_unsigned(va_list list)
 {
-	int count = 0;
-	unsigned int num_copy = n;
+	char *p_buff;
+	int size;
 
-	if (n == 0)
-		count = 1;
-	while (num_copy != 0)
-	{
-		num_copy = num_copy / 10;
-		count++;
-	}
-	if (n >= 10)
-		print_unsig(n / 10);
-	_putchar (n % 10 + '0');
-	return (count);
+	p_buff = itoa(va_arg(list, unsigned int), 10);
+
+	size = print((p_buff != NULL) ? p_buff : "NULL");
+
+	return (size);
 }
